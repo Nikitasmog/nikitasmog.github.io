@@ -1,0 +1,80 @@
+[class*=btn] {
+  display: inline-block;
+  padding: 1em 2em;
+  font-family: sans-serif;
+  color: #eaeaea;
+  font-weight:bold;
+  margin: 1rem;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+[class*=btn]:before, [class*=btn]:after {
+  width: 1em;
+  text-align: center;
+  height: 100%;
+  -webkit-transition: 0.14s;
+  -moz-transition: 0.14s;
+  -o-transition: 0.14s;
+  transition: 0.14s;
+}
+[class*=btn]:hover:before, [class*=btn]:hover:after, [class*=btn]:focus:before, [class*=btn]:focus:after {
+  width: 1.2em;
+}
+[class*=btn]:after {
+  position: absolute;
+  top: 0em;
+  right: 0;
+}
+[class*=btn]:before {
+  position: absolute;
+  top: 0em;
+  left: 0;
+}
+/*!=============================================
+============COLOR SCHEMES + STYLES=============
+===============================================*/
+.btn-kobalt {
+  background: #29448e;
+}
+.btn-basic, .btn-basic_rounded {
+  -webkit-transition: 0.14s;
+  -moz-transition: 0.14s;
+  -o-transition: 0.14s;
+  transition: 0.14s;
+}
+.btn-basic:active, .btn-basic_rounded:active {
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  transform: scale(0.9);
+}
+.btn-basic_rounded, .btn-outline_rounded {
+  border-radius: 5em;
+}
+
+/*!============================
+============SIZES=============
+==============================*/
+.btn-small {
+  font-size: 0.7rem;
+}
+.btn-small:before, .btn-small:after {
+  font-size: 1.4rem;
+}
+
+.btn-medium {
+  font-size: 1rem;
+}
+.btn-medium:before, .btn-medium:after {
+  font-size: 2rem;
+}
+
+.btn-big {
+  font-size: 1.3rem;
+}
+.btn-big:before, .btn-big:after {
+  font-size: 2.6rem;
+}
