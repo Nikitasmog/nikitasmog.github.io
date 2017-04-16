@@ -1,0 +1,50 @@
+﻿<html>
+<head> <title>Лабораторная 3</title> 
+<meta http-equiv="Content-Type" content="text/html; charset="UTF-8"> 
+</head>
+<body>
+	<div>
+	<script>
+	var Today = new Date();
+	var DayOfTheWeek = Today.getDay();
+	var NameOfTheMonth = ['январь','февраль','март','апрель','май',
+	'июнь','июль','август','сент¤брь','окт¤брь','но¤брь','декабрь'];
+	var NumOfTheWeek = Today.getDate();
+	var NumOfTheMonth = Today.getMonth();
+	var NumOfTheYear = Today.getFullYear();
+	var DayOfTheWeeks = ['воскресенье', 'ппонедельник', 'вторник','ср', 'чт', 'пт', 'сб'];
+
+	
+	document.write( NumOfTheWeek,'.',NumOfTheMonth+1,'.',NumOfTheYear, ' - сегодняшняя дата;','<br/>');
+	document.write(NumOfTheMonth+1,'- это ',NameOfTheMonth[NumOfTheMonth],';','<br/>','А день недели сегодня ',DayOfTheWeeks[DayOfTheWeek],';','</br>');
+	
+	var N = new Date(Today.getFullYear(),3,29)
+	var T = new Date(Today.getFullYear(),Today.getMonth(),Today.getDate());
+	document.write('Экзамен будет 29.4.2017, осталось ВСЕГО ',(N.getTime()-T.getTime())/(1000*60*60*24),' дней!!! УЧИТЕ, ГЛУПЦЫ!!!');
+	
+	function UMN(){
+			var a = Number(document.getElementById('a').value,10);
+			var b = Number(document.getElementById('b').value,10);
+			if (!isNaN(a)&&!isNaN(b)){
+			var c=a*b;
+			alert(c);
+			}
+		}
+	</script>
+	<div>
+	<br>Калькулятор умеющий только умножать (буквы не введете, даже не пытайтесь © isNaN)<br>
+	<input id="a" type="text" onkeyup="this.value = this.value.replace (/\D/, '')">*
+	<input id="b" name="text" onkeyup="this.value = this.value.replace (/\D/, '')">
+	<input type="button" value="=" onclick="UMN();"><br><br>
+	</div>
+	<img src="me.jpg" onmouseover="document.getElementById('comment').innerHTML='Да, это я!';" 
+	onmouseout="document.getElementById('comment').innerHTML='';">
+	<font size="20" color="red" face="Arial" id="comment"></font>
+	<div>
+	<input type="radio" name="R" onclick="document.bgColor='#000000'">Выкл свет
+	<input type="radio" name="R" onclick="document.bgColor='#ffff00'">Вкл свет
+	<input type="radio" name="R" onclick="document.bgColor='#ff00ff'">Розовый
+	</div>
+	
+</body>
+</html>
